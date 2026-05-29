@@ -4,7 +4,7 @@ import argparse
 import pandas as pd
 from sklearn.metrics import root_mean_squared_error
 
-from Q_test.task2.models import AnalyticalModel
+from models import AnalyticalModel
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
