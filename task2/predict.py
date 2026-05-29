@@ -14,7 +14,9 @@ def main(test_path: str, model_path: str, output_path: str) -> None:
         output_path: String path to the predictions.
     """
 
+    logging.info(f"Loading test data from {test_path}...") 
     df_test = pd.read_csv(test_path)
+    logging.info(f"Loading model from {model_path}...")
     model = joblib.load(model_path)
 
     logging.info("Generating predictions...")
@@ -22,7 +24,7 @@ def main(test_path: str, model_path: str, output_path: str) -> None:
 
     logging.info(f"Saving predictions to {output_path}...")
     output = pd.DataFrame({'target': predictions})
-    output.to_csv(output_path)
+    output.to_csv(output_path, index=False)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

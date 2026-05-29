@@ -1,7 +1,5 @@
-# Tabular Regression: Analytical Representation Extraction
-
 ## Overview
-The repository contains the solution for Task 2 - tabular data regression task. 
+The directory contains the solution for Task 2 - tabular data regression task. 
 The objective of the task is to predict target based on 53 features.
 The solution includes Exploratory Data Analysis (EDA) notebook and scripts for training and inference.
 

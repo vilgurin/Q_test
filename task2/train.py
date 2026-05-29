@@ -21,12 +21,12 @@ def main(train_path: str, save_path: str) -> None:
 
     X_train = df_train.drop(columns=["target"])
     y_train = df_train['target']
-    
+
     model = AnalyticalModel()
     predictions = model.predict(X_train)
-    
+
     rmse = root_mean_squared_error(y_train, predictions)
-    logging.info(f"Validation RMSE: {rmse}")
+    logging.info(f"Train RMSE: {rmse}")
 
     logging.info(f"Saving model to {save_path}...")
     joblib.dump(model, save_path)

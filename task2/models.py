@@ -1,11 +1,11 @@
 import pandas as pd
 class AnalyticalModel():
-    
+
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
         '''
         Prediction is derived analytically, so nothing to learn
         '''
-        pass
+        return self
 
     def predict(self, X: pd.DataFrame) -> pd.Series:
         '''
@@ -15,7 +15,7 @@ class AnalyticalModel():
 
         Args:
             X: A pandas DataFrame containing at least columns '6' and '7'.
-            
+ 
         Returns:
             A pandas Series of the calculated target.
 
